@@ -1,8 +1,11 @@
-# React + Vite
+## PETA METRO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner of Peta Metro](https://i.ibb.co/3TNmJFN/Banner.png)
 
-Currently, two official plugins are available:
+Peta Metro is a simple website to view all the transit / metro maps from all over the world! I made this website using React mainly.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can take a look at the code by yourself to see how it works under the hood. Mind you it is not the best code as I am a beginner!
+
+There is a Figma file here: [Figma Link - Click Here!](https://www.figma.com/design/mH4kWP89WCstCDsqaF5076/Peta-Metro?node-id=1-18&t=f3vmStmTUKVkgXfS-1)
+
+**Enjoy the website!**
