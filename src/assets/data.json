@@ -1,0 +1,56 @@
+[
+    {
+        "city": "Kuala Lumpur",
+        "country": "Malaysia",
+        "official-site": "https://myrapid.com.my/bus-train/rapid-kl/rapid-kl-integrated-transit-map/",
+        "image-id": "kuala-lumpur",
+        "img-ext": "jpg",
+        "img-alt": "Kuala Lumpur transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Jakarta",
+        "country": "Indonesia",
+        "official-site": "https://jakartamrt.co.id/id/peta-integrasi",
+        "image-id": "jakarta",
+        "img-ext": "jpg",
+        "img-alt": "Jakarta transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Bangkok",
+        "country": "Thailand",
+        "official-site": "https://www.bangkok.go.th/",
+        "image-id": "bangkok",
+        "img-ext": "jpg",
+        "img-alt": "Bangkok transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Singapore",
+        "country": "Singapore",
+        "official-site": "https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/rail_network.html",
+        "image-id": "singapore",
+        "img-ext": "png",
+        "img-alt": "Singapore transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Manila",
+        "country": "Philippines",
+        "official-site": "https://dotr.gov.ph/",
+        "image-id": "manila",
+        "img-ext": "jpg",
+        "img-alt": "Manila transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Berlin",
+        "country": "Germany",
+        "official-site": "https://sbahn.berlin/en/route-map/",
+        "image-id": "berlin",
+        "img-ext": "jpg",
+        "img-alt": "Berlin transit map",
+        "continent": "Europe"
+    }
+]
