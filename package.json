@@ -1,7 +1,7 @@
 {
   "name": "peta-metro",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.1",
   "type": "module",
   "homepage": "https://syazanieamirin.github.io/peta-metro/",
   "scripts": {

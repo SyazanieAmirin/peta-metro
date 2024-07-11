@@ -10,8 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/peta-metro/" element={<Homepage />} />
-        <Route path="/peta-metro/contact/" element={<Contact />} />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   </React.StrictMode>,

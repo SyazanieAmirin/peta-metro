@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 export default function Header({ onclick, onClickItems }) {
 
     const navbarItems = [
-        { title: <Link to="/peta-metro/">Home</Link> },
-        { title: <Link to="/peta-metro/contact/">Contact</Link> },
+        { title: <Link to="/">Home</Link> },
+        { title: <Link to="/contact">Contact</Link> },
     ];
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
