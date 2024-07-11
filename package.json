@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.2",
   "type": "module",
-  "homepage": "http://petametro.com/",
+  "homepage": "https://petametro.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
