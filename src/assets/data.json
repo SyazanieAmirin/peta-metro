@@ -45,12 +45,30 @@
         "continent": "Asia"
     },
     {
+        "city": "Hong Kong",
+        "country": "Hong Kong",
+        "official-site": "https://www.mtr.com.hk/en/customer/services/system_map.html",
+        "image-id": "hongkong",
+        "img-ext": "jpg",
+        "img-alt": "Hong Kong transit map",
+        "continent": "Asia"
+    },
+    {
         "city": "Berlin",
         "country": "Germany",
         "official-site": "https://sbahn.berlin/en/route-map/",
         "image-id": "berlin",
         "img-ext": "jpg",
         "img-alt": "Berlin transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "London",
+        "country": "United Kingdom",
+        "official-site": "https://tfl.gov.uk/maps/track/tube",
+        "image-id": "london",
+        "img-ext": "jpg",
+        "img-alt": "London transit map",
         "continent": "Europe"
     }
 ]

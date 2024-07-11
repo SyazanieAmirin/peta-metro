@@ -44,7 +44,8 @@ export default function Homepage() {
     const filteredData = useMemo(() =>
         Data.filter(city =>
             city.city.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
-            city.country.toLowerCase().includes(debouncedSearchInput.toLowerCase())
+            city.country.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
+            city.continent.toLowerCase().includes(debouncedSearchInput.toLowerCase())
 
         ),
         [debouncedSearchInput]
@@ -58,7 +59,7 @@ export default function Homepage() {
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10">
                 <h1 className='font-bold text-white text-xl mb-2'>Search Map Here</h1>
                 <Searchbar
-                    placeholder="Search by typing the city's name"
+                    placeholder="City, Country, or Continent only"
                     value={searchInput}
                     onChange={handleSearchChange}
                 />
@@ -67,6 +68,7 @@ export default function Homepage() {
                         <Content
                             cityName={selectedCity.city}
                             countryName={selectedCity.country}
+                            continent={selectedCity.continent}
                             imageSrc={`./${selectedCity['image-id']}.${selectedCity['img-ext']}`}
                             imageAlt={selectedCity['img-alt']}
                             onClickDownload={() => handleDownload(selectedCity["official-site"])}
@@ -78,6 +80,7 @@ export default function Homepage() {
                                 key={index}
                                 cityName={city.city}
                                 countryName={city.country}
+                                continent={city.continent}
                                 image={`./${city['image-id']}_thumb.webp`}
                                 imageAlt={city['img-alt']}
                                 onClick={() => handleCardClick(city)}
