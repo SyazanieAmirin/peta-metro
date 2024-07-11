@@ -48,7 +48,7 @@ export default function MobileNavbarOpened({ isOpen, setIsMenuOpen, navbarItems 
             </div>
             <div className='flex flex-row justify-center mt-auto mb-16 gap-2'>
                 <a className='text-white font-bold' href='https://syazanieamirin.github.io/portfolio.github.io/' target='_blank'>
-                    Created by <span className='text-link'>Syazanie Amirin | V1.0.1</span>
+                    Created by <span className='text-link'>Syazanie Amirin | V1.0.2</span>
                 </a>
                 <a href="https://github.com/SyazanieAmirin/astakona" target='_blank'>
                     <img src={GithubIcon} alt="Github Logo" className="h-5 w-5 hover:scale-90 hover:cursor-pointer" />

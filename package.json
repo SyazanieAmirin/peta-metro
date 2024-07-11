@@ -1,9 +1,9 @@
 {
   "name": "peta-metro",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
-  "homepage": "https://syazanieamirin.github.io/peta-metro/",
+  "homepage": "http://petametro.com/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
