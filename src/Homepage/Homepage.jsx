@@ -4,6 +4,7 @@ const Header = lazy(() => import('../Header/Header'));
 const Searchbar = lazy(() => import('../Components/Searchbar'));
 const MainCard = lazy(() => import('../Components/MainCard'));
 const Content = lazy(() => import('../Content/Content'));
+import Footer from '../Footer/Footer';
 import Data from '../assets/data.json';
 
 export default function Homepage() {
@@ -85,6 +86,7 @@ export default function Homepage() {
                     )}
                 </div>
             </div>
+            <Footer />
         </Suspense>
     );
 }

@@ -1,21 +1,39 @@
 import { useState } from "react";
-import Header from "../Header/Header";
+import { useNavigate } from 'react-router-dom';
 
-export default function Contact({ onClickView }) {
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+export default function Contact() {
 
     const [isDonateInternational, setIsDonateInternational] = useState(false);
     const [isDonateMalaysia, setIsDonateMalaysia] = useState(false);
 
+    const navigate = useNavigate();
+
+
     return (
         <>
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
-                <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} />
+                <Header onclick={() => navigate("/")} />
             </div>
             <div className="max-w-[1200px] mx-auto mt-10 px-5 flex flex-col gap-5">
                 <h1 className="text-white text-3xl font-bold text-center">Contact Me</h1>
                 <hr></hr>
-                <h1 className="text-center text-white font-bold text-xl">My Email</h1>
-                <a className="text-center text-blue-200 underline" href="muhdsyazanieamirin@gmail.com">muhdsyazanieamirin@gmail.com</a>
+                <div className="flex flex-col lg:flex-row justify-between gap-5">
+                    <div className="flex flex-col gap-3">
+                        <h1 className="text-center text-white font-bold text-xl">My Email</h1>
+                        <a className="text-center text-blue-200 underline" href="mailto:muhdsyazanieamirin@gmail.com">muhdsyazanieamirin@gmail.com</a>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                        <h1 className="text-center text-white font-bold text-xl">My Website</h1>
+                        <a className="text-center text-blue-200 underline" href="https://syazanieamirin.github.io/portfolio.github.io/" target="_blank">https://syazanieamirin.github.io/portfolio.<br></br>github.io/</a>
+                    </div>
+                    <div className="flex flex-col gap-3">
+                        <h1 className="text-center text-white font-bold text-xl">This Website's Repository</h1>
+                        <a className="text-center text-blue-200 underline" href="https://github.com/SyazanieAmirin/peta-metro" target="_blank">https://github.com/SyazanieAmirin/<br></br>peta-metro</a>
+                    </div>
+                </div>
                 <hr></hr>
             </div>
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col gap-5">
@@ -39,6 +57,7 @@ export default function Contact({ onClickView }) {
                     </div>
                 )}
             </div>
+            <Footer />
         </>
     )
 }
