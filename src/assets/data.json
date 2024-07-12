@@ -81,6 +81,44 @@
         "continent": "Europe"
     },
     {
+        "city": "Hamburg",
+        "country": "Germany",
+        "official-site": "https://www.hvv.de/en/timetables/line-networks-at-a-glance",
+        "image-id": "hamburg",
+        "img-ext": "jpg",
+        "img-alt": "Hamburg transit map",
+        "continent": "Europe",
+        "note": "The map is not official. It was made by: Maximilian Dörrbecker",
+        "note-link": "https://en.wikipedia.org/wiki/Hamburg_U-Bahn#/media/File:Hamburger_Hochbahn_-_Entwicklungsgeschichte.png"
+    },
+    {
+        "city": "Munich",
+        "country": "Germany",
+        "official-site": "https://www.mvv-muenchen.de/en/maps-stations/maps/index.html",
+        "image-id": "munich",
+        "img-ext": "jpg",
+        "img-alt": "Munich transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Nuremberg",
+        "country": "Germany",
+        "official-site": "https://www.vgn.de/netz-fahrplaene/liniennetze/",
+        "image-id": "nuremberg",
+        "img-ext": "jpg",
+        "img-alt": "Nuremberg transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Paris",
+        "country": "France",
+        "official-site": "https://www.ratp.fr/en/plans-lignes",
+        "image-id": "paris",
+        "img-ext": "jpg",
+        "img-alt": "Paris transit map",
+        "continent": "Europe"
+    },
+    {
         "city": "Mauritius",
         "country": "Mauritius",
         "official-site": "https://mauritiusmetroexpress.mu/interactive-map-metro-express/?lang=en",
@@ -88,5 +126,16 @@
         "img-ext": "svg",
         "img-alt": "Mauritius transit map",
         "continent": "Africa"
+    },
+    {
+        "city": "Cape Town",
+        "country": "South Africa",
+        "official-site": "https://www.capetown.gov.za/Family%20and%20home/Transport-and-vehicles/Public-transport-services/Metrorail#Heading0",
+        "image-id": "capetown",
+        "img-ext": "png",
+        "img-alt": "Cape Town transit map",
+        "continent": "Africa",
+        "note": "The map is not official. It was made by: Wwwdigi",
+        "note-link": "https://en.wikipedia.org/wiki/Metrorail_Western_Cape#/media/File:Metrorail_Cape_Town.png_"
     }
 ]

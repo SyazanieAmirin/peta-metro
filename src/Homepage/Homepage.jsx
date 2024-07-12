@@ -81,6 +81,8 @@ export default function Homepage() {
                             imageAlt={selectedCity['img-alt']}
                             onClickDownload={() => handleDownload(selectedCity["official-site"])}
                             onClickView={() => handleView(`./${selectedCity['image-id']}.${selectedCity['img-ext']}`)}
+                            extraNote={selectedCity.note}
+                            noteLink={selectedCity['note-link']}
                         />
                     ) : (
                         filteredData.length > 0 ? (
