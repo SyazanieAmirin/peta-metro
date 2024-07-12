@@ -61,7 +61,7 @@ export default function Homepage() {
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
                 <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }} />
             </div>
-            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10">
+            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col">
                 <h1 className='font-bold text-white text-xl mb-2'>Search Map Here</h1>
                 <Searchbar
                     placeholder="City, Country, or Continent only"
@@ -69,7 +69,9 @@ export default function Homepage() {
                     onChange={handleSearchChange}
                 />
 
-                <div className='flex flex-col gap-5 mt-10'>
+                {selectedCity && <button className='bg-primary py-2 px-5 w-full max-w-[200px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }}>Go Back</button>}
+
+                <div className='flex flex-col gap-5 mt-5'>
                     {selectedCity ? (
                         <Content
                             cityName={selectedCity.city}
@@ -98,6 +100,8 @@ export default function Homepage() {
                         )
                     )}
                 </div>
+
+                {selectedCity && <><hr></hr><button className='bg-primary mx-auto py-2 px-5 w-full max-w-[300px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }}>Go Back</button></>}
             </div>
             <Footer />
         </Suspense>
