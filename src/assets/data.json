@@ -63,6 +63,17 @@
         "continent": "Asia"
     },
     {
+        "city": "Pulau Pinang (Penang)",
+        "country": "Malaysia",
+        "official-site": "https://penanginfra.com/",
+        "image-id": "pulaupinang",
+        "img-ext": "svg",
+        "img-alt": "Penang transit map",
+        "continent": "Asia",
+        "note": "The map is not official. It was made by: Syazanie Amirin (Me)",
+        "note-link": "https://syazanieamirin.github.io/portfolio.github.io/"
+    },
+    {
         "city": "Berlin",
         "country": "Germany",
         "official-site": "https://sbahn.berlin/en/route-map/",
@@ -116,6 +127,35 @@
         "image-id": "paris",
         "img-ext": "jpg",
         "img-alt": "Paris transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Rome",
+        "country": "Italy",
+        "official-site": "https://www.atac.roma.it/en/utility/maps",
+        "image-id": "rome",
+        "img-ext": "svg",
+        "img-alt": "Rome transit map",
+        "continent": "Europe",
+        "note": "The map is not official. It was made by: Junge30",
+        "note-link": "https://en.wikipedia.org/wiki/Rome_Metro#/media/File:Roma_-_mappa_metropolitana_2021_(schematica).svg"
+    },
+    {
+        "city": "Lisbon",
+        "country": "Portugal",
+        "official-site": "https://www.metrolisboa.pt/en/travel/diagrams-and-maps/",
+        "image-id": "lisbon",
+        "img-ext": "jpg",
+        "img-alt": "Lisbon transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Barcelona",
+        "country": "Spain",
+        "official-site": "https://www.tmb.cat/en/barcelona-transport/map/metro",
+        "image-id": "barcelona",
+        "img-ext": "jpg",
+        "img-alt": "Barcelona transit map",
         "continent": "Europe"
     },
     {

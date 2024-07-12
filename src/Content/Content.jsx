@@ -27,7 +27,7 @@ export default function Content({ cityName, countryName, imageSrc, imageAlt, onC
                 />
                 <button className="mt-5 bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:scale-90" onClick={onClickDownload}>Download (From External Site)</button>
                 <button className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:scale-90" onClick={onClickView}>View in new Tab</button>
-                {extraNote && <h1 className='text-center text-white text-l font-bold mt-5'>Note: {extraNote} | <a href={noteLink} className='text-blue-200 underline'>Link</a></h1>}
+                {extraNote && <h1 className='text-center text-white text-l font-bold mt-5'>Note: {extraNote} | <a href={noteLink} className='text-blue-200 underline' target='_blank'>Link</a></h1>}
             </div>
         </div>
     )
