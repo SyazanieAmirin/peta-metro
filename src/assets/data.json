@@ -54,6 +54,15 @@
         "continent": "Asia"
     },
     {
+        "city": "Tokyo",
+        "country": "Japan",
+        "official-site": "https://www.tokyometro.jp/en/subwaymap/index.html",
+        "image-id": "tokyo",
+        "img-ext": "jpg",
+        "img-alt": "Tokyo transit map",
+        "continent": "Asia"
+    },
+    {
         "city": "Berlin",
         "country": "Germany",
         "official-site": "https://sbahn.berlin/en/route-map/",
@@ -70,5 +79,14 @@
         "img-ext": "jpg",
         "img-alt": "London transit map",
         "continent": "Europe"
+    },
+    {
+        "city": "Mauritius",
+        "country": "Mauritius",
+        "official-site": "https://mauritiusmetroexpress.mu/interactive-map-metro-express/?lang=en",
+        "image-id": "mauritius",
+        "img-ext": "svg",
+        "img-alt": "Mauritius transit map",
+        "continent": "Africa"
     }
 ]

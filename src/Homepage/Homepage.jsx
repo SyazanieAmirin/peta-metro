@@ -39,6 +39,10 @@ export default function Homepage() {
     const handleSearchChange = (event) => {
         setSearchInput(event.target.value);
         setSelectedCity(null);
+
+        if (searchInput != "") {
+            setEmptySearch(true);
+        }
     };
 
     const filteredData = useMemo(() =>
@@ -51,8 +55,9 @@ export default function Homepage() {
         [debouncedSearchInput]
     );
 
+
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense>
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
                 <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }} />
             </div>
@@ -63,6 +68,7 @@ export default function Homepage() {
                     value={searchInput}
                     onChange={handleSearchChange}
                 />
+
                 <div className='flex flex-col gap-5 mt-10'>
                     {selectedCity ? (
                         <Content
@@ -75,17 +81,21 @@ export default function Homepage() {
                             onClickView={() => handleView(`./${selectedCity['image-id']}.${selectedCity['img-ext']}`)}
                         />
                     ) : (
-                        filteredData.map((city, index) => (
-                            <MainCard
-                                key={index}
-                                cityName={city.city}
-                                countryName={city.country}
-                                continent={city.continent}
-                                image={`./${city['image-id']}_thumb.webp`}
-                                imageAlt={city['img-alt']}
-                                onClick={() => handleCardClick(city)}
-                            />
-                        ))
+                        filteredData.length > 0 ? (
+                            filteredData.map((city, index) => (
+                                <MainCard
+                                    key={index}
+                                    cityName={city.city}
+                                    countryName={city.country}
+                                    continent={city.continent}
+                                    image={`./${city['image-id']}_thumb.webp`}
+                                    imageAlt={city['img-alt']}
+                                    onClick={() => handleCardClick(city)}
+                                />
+                            ))
+                        ) : (
+                            debouncedSearchInput && <h1 className="text-white text-xl font-bold text-center">No results found. Please search using only City's name, Country's name or the Continent's name</h1>
+                        )
                     )}
                 </div>
             </div>
