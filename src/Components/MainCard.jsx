@@ -1,6 +1,6 @@
 export default function MainCard({ cityName, countryName, image, imageAlt, onClick, continent }) {
     return (
-        <div className="bg-secondary rounded-lg transition-all lg:hover:scale-90 hover:cursor-pointer mt-5" onClick={onClick}>
+        <div className="bg-secondary rounded-lg transition-all lg:hover:opacity-50 hover:cursor-pointer mt-5" onClick={onClick}>
             <div className="flex flex-row gap-5">
                 <div className="rounded-lg">
                     <img src={image} alt={imageAlt} className="h-max-[220px] w-max-[220px] h-[120px] w-[120px] rounded-lg opacity-70" loading="lazy" />
