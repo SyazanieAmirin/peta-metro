@@ -63,6 +63,17 @@
         "continent": "Asia"
     },
     {
+        "city": "Beijing",
+        "country": "China",
+        "official-site": "https://www.mtr.bj.cn/en/",
+        "image-id": "beijing",
+        "img-ext": "svg",
+        "img-alt": "Beijing transit map",
+        "continent": "Asia",
+        "note": "The map is not official. It was made by: Ran and Hat600",
+        "note-link": "https://en.wikipedia.org/wiki/Beijing_Subway#/media/File:Beijing-Subway_en.svg"
+    },
+    {
         "city": "Pulau Pinang (Penang)",
         "country": "Malaysia",
         "official-site": "https://penanginfra.com/",
