@@ -74,6 +74,15 @@
         "note-link": "https://en.wikipedia.org/wiki/Beijing_Subway#/media/File:Beijing-Subway_en.svg"
     },
     {
+        "city": "Taipei",
+        "country": "Taiwan",
+        "official-site": "https://english.metro.taipei/cp.aspx?n=1BE0AF76C79F9A38",
+        "image-id": "taipei",
+        "img-ext": "jpg",
+        "img-alt": "Taipei transit map",
+        "continent": "Asia"
+    },
+    {
         "city": "Pulau Pinang (Penang)",
         "country": "Malaysia",
         "official-site": "https://penanginfra.com/",
