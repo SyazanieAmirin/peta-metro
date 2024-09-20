@@ -27,7 +27,7 @@ export default function Contact() {
                     </div>
                     <div className="flex flex-col gap-3">
                         <h1 className="text-center text-white font-bold text-xl">My Website</h1>
-                        <a className="text-center text-blue-200 underline" href="https://syazanieamirin.github.io/portfolio.github.io/" target="_blank">https://syazanieamirin.github.io/portfolio.<br></br>github.io/</a>
+                        <a className="text-center text-blue-200 underline" href="https://syazanie.com/" target="_blank">https://syazanie.com/</a>
                     </div>
                     <div className="flex flex-col gap-3">
                         <h1 className="text-center text-white font-bold text-xl">This Website's Repository</h1>
