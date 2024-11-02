@@ -12,6 +12,8 @@ export default function Homepage() {
     const [selectedCity, setSelectedCity] = useState(null);
     const [searchInput, setSearchInput] = useState('');
     const [debouncedSearchInput, setDebouncedSearchInput] = useState(searchInput);
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 15;  // Show 15 items per page
 
     useEffect(() => {
         const handler = setTimeout(() => {
@@ -22,12 +24,6 @@ export default function Homepage() {
             clearTimeout(handler);
         };
     }, [searchInput]);
-
-    const handleCardClick = (city) => {
-        setSelectedCity(city);
-        window.scrollTo(0, 0);
-        setSearchInput('');
-    };
 
     const handleDownload = (website) => {
         window.open(website, "_blank");
@@ -40,6 +36,7 @@ export default function Homepage() {
     const handleSearchChange = (event) => {
         setSearchInput(event.target.value);
         setSelectedCity(null);
+        setCurrentPage(1);  // Reset to first page on when the user searches
     };
 
     const filteredData = useMemo(() =>
@@ -50,6 +47,19 @@ export default function Homepage() {
         ),
         [debouncedSearchInput]
     );
+
+    // Calculate paginated data
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const paginatedData = filteredData.slice(startIndex, startIndex + itemsPerPage);
+
+    // Calculate total pages
+    const totalPages = Math.ceil(filteredData.length / itemsPerPage);
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0 });
+    };
+
 
     return (
         <Suspense>
@@ -63,6 +73,11 @@ export default function Homepage() {
                     value={searchInput}
                     onChange={handleSearchChange}
                 />
+
+                {/* Display the number of maps dynamically */}
+                <h1 className='font-bold text-white/70 text-lg mt-5 text-right'>
+                    Number of Maps: {filteredData.length}
+                </h1>
 
                 {selectedCity && (
                     <button className='bg-primary py-2 px-5 w-full max-w-[200px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }}>
@@ -86,8 +101,8 @@ export default function Homepage() {
                             onSearchChange={handleSearchChange}
                         />
                     ) : (
-                        filteredData.length > 0 ? (
-                            filteredData.map((city, index) => (
+                        paginatedData.length > 0 ? (
+                            paginatedData.map((city, index) => (
                                 <MainCard
                                     key={index}
                                     cityName={city.city}
@@ -104,14 +119,18 @@ export default function Homepage() {
                     )}
                 </div>
 
-                {selectedCity && (
-                    <>
-                        <hr />
-                        <button className='bg-primary mx-auto py-2 px-5 w-full max-w-[300px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }}>
-                            Go Back
+                {/* Pagination controls */}
+                <div className="flex justify-center mt-5">
+                    {Array.from({ length: totalPages }, (_, i) => (
+                        <button
+                            key={i + 1}
+                            onClick={() => handlePageChange(i + 1)}
+                            className={`px-4 py-2 mx-1 rounded-full font-bold ${i + 1 === currentPage ? 'bg-primary text-white' : 'bg-gray-300 transition-all hover:opacity-70'}`}
+                        >
+                            {i + 1}
                         </button>
-                    </>
-                )}
+                    ))}
+                </div>
             </div>
             <Footer />
         </Suspense>

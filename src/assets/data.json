@@ -384,5 +384,41 @@
         "continent": "Africa",
         "note": "The map is not official. It was made by: UrbanRail.net",
         "note-link": "https://www.urbanrail.net/af/alg/algiers.htm"
+    },
+    {
+        "city": "Buenos Aires",
+        "country": "Argentina",
+        "official-site": "https://buenosaires.gob.ar/subte/mapa-del-subte-y-combinaciones",
+        "image-id": "buenos_aires",
+        "img-ext": "png",
+        "img-alt": "Buenos Aires transit map",
+        "continent": "South America"
+    },
+    {
+        "city": "Yerevan",
+        "country": "Armenia",
+        "official-site": "https://www.yerevan.am/en/metro/",
+        "image-id": "yerevan",
+        "img-ext": "svg",
+        "img-alt": "Yerevan transit map",
+        "continent": "Asia"
+    },
+    {
+        "city": "Vienna",
+        "country": "Austria",
+        "official-site": "https://www.wienerlinien.at/web/wl-en/maps",
+        "image-id": "vienna",
+        "img-ext": "png",
+        "img-alt": "Vienna transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Baku",
+        "country": "Azerbaijan",
+        "official-site": "https://metro.gov.az/en/page/xetlerimiz/umumi-melumat",
+        "image-id": "baku",
+        "img-ext": "jpg",
+        "img-alt": "Baku transit map",
+        "continent": "Asia"
     }
 ]
