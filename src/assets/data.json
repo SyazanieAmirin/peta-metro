@@ -373,5 +373,16 @@
         "continent": "Africa",
         "note": "The map is not official. It was made by: Wwwdigi",
         "note-link": "https://en.wikipedia.org/wiki/Metrorail_Western_Cape#/media/File:Metrorail_Cape_Town.png_"
+    },
+    {
+        "city": "Algiers | Al Jaza'ir",
+        "country": "Algeria",
+        "official-site": "https://www.metroalger-dz.com/",
+        "image-id": "algeria",
+        "img-ext": "png",
+        "img-alt": "Algeria transit map",
+        "continent": "Africa",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/af/alg/algiers.htm"
     }
 ]

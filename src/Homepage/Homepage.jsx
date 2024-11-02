@@ -1,3 +1,4 @@
+// Homepage.jsx
 import React, { useState, useMemo, useEffect, lazy, Suspense } from 'react';
 
 const Header = lazy(() => import('../Header/Header'));
@@ -39,10 +40,6 @@ export default function Homepage() {
     const handleSearchChange = (event) => {
         setSearchInput(event.target.value);
         setSelectedCity(null);
-
-        if (searchInput != "") {
-            setEmptySearch(true);
-        }
     };
 
     const filteredData = useMemo(() =>
@@ -50,16 +47,14 @@ export default function Homepage() {
             city.city.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
             city.country.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
             city.continent.toLowerCase().includes(debouncedSearchInput.toLowerCase())
-
         ),
         [debouncedSearchInput]
     );
 
-
     return (
         <Suspense>
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
-                <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }} />
+                <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} />
             </div>
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col">
                 <h1 className='font-bold text-white text-xl mb-2'>Search Map Here</h1>
@@ -69,7 +64,11 @@ export default function Homepage() {
                     onChange={handleSearchChange}
                 />
 
-                {selectedCity && <button className='bg-primary py-2 px-5 w-full max-w-[200px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }}>Go Back</button>}
+                {selectedCity && (
+                    <button className='bg-primary py-2 px-5 w-full max-w-[200px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }}>
+                        Go Back
+                    </button>
+                )}
 
                 <div className='flex flex-col gap-5 mt-5'>
                     {selectedCity ? (
@@ -83,6 +82,8 @@ export default function Homepage() {
                             onClickView={() => handleView(`./${selectedCity['image-id']}.${selectedCity['img-ext']}`)}
                             extraNote={selectedCity.note}
                             noteLink={selectedCity['note-link']}
+                            searchInput={searchInput}
+                            onSearchChange={handleSearchChange}
                         />
                     ) : (
                         filteredData.length > 0 ? (
@@ -94,7 +95,7 @@ export default function Homepage() {
                                     continent={city.continent}
                                     image={`./${city['image-id']}_thumb.webp`}
                                     imageAlt={city['img-alt']}
-                                    onClick={() => handleCardClick(city)}
+                                    cityId={city['image-id']}
                                 />
                             ))
                         ) : (
@@ -103,7 +104,14 @@ export default function Homepage() {
                     )}
                 </div>
 
-                {selectedCity && <><hr></hr><button className='bg-primary mx-auto py-2 px-5 w-full max-w-[300px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }} onClickItems={() => { setSelectedCity(null); setSearchInput(""); }}>Go Back</button></>}
+                {selectedCity && (
+                    <>
+                        <hr />
+                        <button className='bg-primary mx-auto py-2 px-5 w-full max-w-[300px] rounded-full text-white font-bold transition-all hover:scale-90 mt-5' onClick={() => { setSelectedCity(null); setSearchInput(""); }}>
+                            Go Back
+                        </button>
+                    </>
+                )}
             </div>
             <Footer />
         </Suspense>
