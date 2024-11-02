@@ -27,7 +27,7 @@ export default function Contact() {
                     </div>
                     <div className="flex flex-col gap-3">
                         <h1 className="text-center text-white font-bold text-xl">My Website</h1>
-                        <a className="text-center text-blue-200 underline" href="https://syazanieamirin.github.io/portfolio.github.io/" target="_blank">https://syazanieamirin.github.io/portfolio.<br></br>github.io/</a>
+                        <a className="text-center text-blue-200 underline" href="https://syazanie.com/" target="_blank">https://syazanie.com/</a>
                     </div>
                     <div className="flex flex-col gap-3">
                         <h1 className="text-center text-white font-bold text-xl">This Website's Repository</h1>
@@ -38,7 +38,7 @@ export default function Contact() {
             </div>
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col gap-5">
                 <h1 className="text-white font-bold text-center text-xl">Donation</h1>
-                <p className="text-white text-center"><span className="font-bold">Note:</span> I don't store any of the credit/debit card information as all transactions are processed using Buy Me A Coffee or the Maybank payment processor.</p>
+                <p className="text-white text-center"><span className="font-bold">Note:</span> I do not store any of the credit/debit card information as all transactions are processed using Buy Me A Coffee or the Maybank payment processor.</p>
                 <h1 className="text-white font-bold text-center text-l">Choose Type of Donation</h1>
                 <div className="flex flex-row gap-5 items-center justify-center">
                     <button className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:scale-90" onClick={() => { setIsDonateInternational(true); setIsDonateMalaysia(false) }}>International</button>
