@@ -17,4 +17,4 @@ This is the steps on how to add new map.
 2. Add the map's png/jpg inside peta-metro/public folder
 3. Go to: (https://bulkresizephotos.com/en?type=filesize&filesize=15000&format=webp&quality=32)
 4. Add _thumb beside the name of the city. (ex. algeria_thumb.webp)
-5. 
+5. Done!
