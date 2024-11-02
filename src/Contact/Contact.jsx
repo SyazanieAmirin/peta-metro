@@ -14,10 +14,10 @@ export default function Contact() {
 
     return (
         <>
-            <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
+            <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start animate-fade-in">
                 <Header onclick={() => navigate("/")} />
             </div>
-            <div className="max-w-[1200px] mx-auto mt-10 px-5 flex flex-col gap-5">
+            <div className="max-w-[1200px] mx-auto mt-10 px-5 flex flex-col gap-5 animate-fade-in">
                 <h1 className="text-white text-3xl font-bold text-center">Contact Me</h1>
                 <hr></hr>
                 <div className="flex flex-col lg:flex-row justify-between gap-5">
@@ -36,7 +36,7 @@ export default function Contact() {
                 </div>
                 <hr></hr>
             </div>
-            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col gap-5">
+            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col gap-5 animate-fade-in">
                 <h1 className="text-white font-bold text-center text-2xl">Donation</h1>
                 <div className="flex flex-row gap-5 items-center justify-center">
                     <button className="bg-blue-500 py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-70" onClick={() => { setIsDonateInternational(true); setIsDonateMalaysia(false) }}>Using Buy Me A Coffee</button>

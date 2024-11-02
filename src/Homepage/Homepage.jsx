@@ -52,11 +52,11 @@ export default function Homepage() {
 
     return (
         <Suspense>
-            <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start">
+            <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start animate-fade-in">
                 <Header onclick={() => { setSelectedCity(null); setSearchInput(""); }} />
             </div>
-            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col">
-                <h1 className='font-bold text-white text-xl mb-2'>Search Map Here</h1>
+            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col animate-fade-in">
+                <h1 className='font-bold text-white text-xl mb-2 animate-fade-in'>Search Map Here</h1>
                 <Searchbar
                     placeholder="City, Country, or Continent only"
                     value={searchInput}
@@ -73,7 +73,7 @@ export default function Homepage() {
                     </button>
                 )}
 
-                <div className='flex flex-col gap-5 mt-5'>
+                <div key={currentPage} className='flex flex-col gap-5 mt-5 animate-fade-in'>
                     {selectedCity ? (
                         <Content
                             cityName={selectedCity.city}
@@ -101,7 +101,7 @@ export default function Homepage() {
                                     cityId={city['image-id']}
                                     onClick={() => {
                                         setSelectedCity(city);
-                                        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top with smooth effect
+                                        window.scrollTo({ top: 0, behavior: 'smooth' });
                                     }}
                                 />
                             ))
@@ -110,6 +110,7 @@ export default function Homepage() {
                         )
                     )}
                 </div>
+
 
                 <div className="flex justify-center mt-5">
                     {Array.from({ length: totalPages }, (_, i) => (

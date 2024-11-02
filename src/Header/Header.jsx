@@ -14,7 +14,7 @@ export default function Header({ onclick, onClickItems }) {
 
     return (
         <>
-            <div className="flex flex-row w-full align-middle items-center justify-between bg-secondary lg:py-3">
+            <div className="flex flex-row w-full align-middle items-center justify-between bg-secondary lg:py-3 animate-fade-in">
                 <h1 className="pl-5 lg:pl-16 font-bold tracking-[0.55em] text-white hover:cursor-pointer" onClick={onclick}>PETA METRO</h1>
                 <header className="lg:hidden flex flex-col gap-1 mr-5 my-3" onClick={() => setIsMenuOpen(true)}>
                     <h1 className="w-full h-full py-[0.10em] px-3 rounded-full bg-white"></h1>

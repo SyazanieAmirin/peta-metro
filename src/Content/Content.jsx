@@ -23,7 +23,7 @@ export default function Content() {
     return (
         <>
             <Header onclick={() => window.history.back()} />
-            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col">
+            <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col animate-fade-in">
                 <div className="flex flex-col gap-1 mb-5">
                     <h1 className="text-3xl font-bold text-white">{cityData.city}</h1>
                     <h2 className="text-white/60 mb-5">{cityData.country} | {cityData.continent}</h2>
@@ -31,7 +31,7 @@ export default function Content() {
                     <img
                         src={`./${cityData['image-id']}.${cityData['img-ext']}`}
                         alt={cityData['img-alt']}
-                        className="rounded-lg mb-3"
+                        className="rounded-lg mb-3 animate-fade-in"
                         onLoad={() => setLoading(false)}
                         style={{ display: loading ? 'none' : 'block' }}
                     />
