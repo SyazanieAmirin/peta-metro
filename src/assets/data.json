@@ -458,5 +458,14 @@
         "img-ext": "png",
         "img-alt": "Belo Horizonte transit map",
         "continent": "South America"
+    },
+    {
+        "city": "New York City",
+        "country": "United States",
+        "official-site": "https://new.mta.info/maps",
+        "image-id": "new_york_city",
+        "img-ext": "png",
+        "img-alt": "New York City transit map",
+        "continent": "North America"
     }
 ]
