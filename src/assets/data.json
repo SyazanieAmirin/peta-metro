@@ -420,5 +420,43 @@
         "img-ext": "jpg",
         "img-alt": "Baku transit map",
         "continent": "Asia"
+    },
+    {
+        "city": "Dhaka",
+        "country": "Bangladesh",
+        "official-site": "https://dmtcl.portal.gov.bd/",
+        "image-id": "dhaka",
+        "img-ext": "svg",
+        "img-alt": "Dhaka transit map",
+        "continent": "Asia",
+        "note": "The map is not official. It was made by: Tanvir Anjum Adib | This map is a planned map. For now only MRT Line 6 is operational. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Dhaka_Metro_Rail#/media/File:Dhaka_MRT_Network_(en).svg"
+    },
+    {
+        "city": "Minsk",
+        "country": "Belarus",
+        "official-site": "https://metropoliten.by/by/sxema-linii/",
+        "image-id": "minsk",
+        "img-ext": "jpg",
+        "img-alt": "Minsk transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Brussels",
+        "country": "Belgium",
+        "official-site": "https://www.stib-mivb.be/article.html?_guid=00266bf9-0883-3410-bc80-cd51a4d340c3&l=en#contentBodyList1",
+        "image-id": "brussels",
+        "img-ext": "png",
+        "img-alt": "Brussels transit map",
+        "continent": "Europe"
+    },
+    {
+        "city": "Belo Horizonte",
+        "country": "Brazil",
+        "official-site": "https://www.metrobh.com.br/va-de-metro/#linhas-horarios-e-tarifas",
+        "image-id": "belo_horizonte",
+        "img-ext": "png",
+        "img-alt": "Belo Horizonte transit map",
+        "continent": "South America"
     }
 ]
