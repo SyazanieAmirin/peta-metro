@@ -1,33 +1,41 @@
-// Content.jsx
-import React from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import Data from '../assets/data.json';
 import Header from '../Header/Header';
-import Searchbar from '../Components/Searchbar';
-import { useNavigate } from 'react-router-dom';
 
-export default function Content({ searchInput, onSearchChange }) {
+export default function Content() {
     const { cityId } = useParams();
     const cityData = Data.find(city => city['image-id'] === cityId);
+    const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     if (!cityData) {
         return <h1 className="text-white">City not found</h1>;
     }
 
-    const navigate = useNavigate();
-
     const handleGoBack = () => {
         navigate("/");
     };
+
+    // On load, scroll to top
+    window.scrollTo({ top: 0 });
 
     return (
         <>
             <Header onclick={() => window.history.back()} />
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col">
-                <div className="flex flex-col gap-1 mb-5 mt-5">
+                <div className="flex flex-col gap-1 mb-5">
                     <h1 className="text-3xl font-bold text-white">{cityData.city}</h1>
                     <h2 className="text-white/60 mb-5">{cityData.country} | {cityData.continent}</h2>
-                    <img src={`./${cityData['image-id']}.${cityData['img-ext']}`} alt={cityData['img-alt']} className="rounded-lg mb-3" />
+                    {loading && <div className="w-full h-svh bg-primary rounded-lg animate-pulse"></div>}
+                    <img
+                        src={`./${cityData['image-id']}.${cityData['img-ext']}`}
+                        alt={cityData['img-alt']}
+                        className="rounded-lg mb-3"
+                        onLoad={() => setLoading(false)}
+                        style={{ display: loading ? 'none' : 'block' }}
+                    />
+
                     {cityData.note && <p className="text-white mb-5 font-bold text-center">Note: {cityData.note}</p>}
 
                     <div className='flex flex-col gap-5 w-full mt-5'>

@@ -15,16 +15,6 @@ export default function Homepage() {
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 15;  // Show 15 items per page
 
-    useEffect(() => {
-        const handler = setTimeout(() => {
-            setDebouncedSearchInput(searchInput);
-        }, 300);
-
-        return () => {
-            clearTimeout(handler);
-        };
-    }, [searchInput]);
-
     const handleDownload = (website) => {
         window.open(website, "_blank");
     };
@@ -38,14 +28,13 @@ export default function Homepage() {
         setSelectedCity(null);
         setCurrentPage(1);  // Reset to first page on when the user searches
     };
-
     const filteredData = useMemo(() =>
         Data.filter(city =>
-            city.city.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
-            city.country.toLowerCase().includes(debouncedSearchInput.toLowerCase()) ||
-            city.continent.toLowerCase().includes(debouncedSearchInput.toLowerCase())
+            city.city.toLowerCase().includes(searchInput.toLowerCase()) ||
+            city.country.toLowerCase().includes(searchInput.toLowerCase()) ||
+            city.continent.toLowerCase().includes(searchInput.toLowerCase())
         ),
-        [debouncedSearchInput]
+        [searchInput]
     );
 
     // Calculate paginated data
@@ -74,7 +63,6 @@ export default function Homepage() {
                     onChange={handleSearchChange}
                 />
 
-                {/* Display the number of maps dynamically */}
                 <h1 className='font-bold text-white/70 text-lg mt-5 text-right'>
                     Number of Maps: {filteredData.length}
                 </h1>
@@ -111,15 +99,18 @@ export default function Homepage() {
                                     image={`./${city['image-id']}_thumb.webp`}
                                     imageAlt={city['img-alt']}
                                     cityId={city['image-id']}
+                                    onClick={() => {
+                                        setSelectedCity(city);
+                                        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top with smooth effect
+                                    }}
                                 />
                             ))
                         ) : (
-                            debouncedSearchInput && <h1 className="text-white text-xl font-bold text-center">No results found. Please search using only City's name, Country's name or the Continent's name</h1>
+                            searchInput && <h1 className="text-white text-xl font-bold text-center">No results found. Please search using only City's name, Country's name or the Continent's name</h1>
                         )
                     )}
                 </div>
 
-                {/* Pagination controls */}
                 <div className="flex justify-center mt-5">
                     {Array.from({ length: totalPages }, (_, i) => (
                         <button

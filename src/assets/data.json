@@ -20,9 +20,9 @@
     {
         "city": "Bangkok",
         "country": "Thailand",
-        "official-site": "https://www.bangkok.go.th/",
+        "official-site": "https://www.bangkoktransitmap.com/",
         "image-id": "bangkok",
-        "img-ext": "jpg",
+        "img-ext": "png",
         "img-alt": "Bangkok transit map",
         "continent": "Asia"
     },
