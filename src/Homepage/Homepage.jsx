@@ -32,7 +32,8 @@ export default function Homepage() {
         Data.filter(city =>
             city.city.toLowerCase().includes(searchInput.toLowerCase()) ||
             city.country.toLowerCase().includes(searchInput.toLowerCase()) ||
-            city.continent.toLowerCase().includes(searchInput.toLowerCase())
+            city.continent.toLowerCase().includes(searchInput.toLowerCase()) ||
+            city.shortened?.toLowerCase().includes(searchInput.toLowerCase()),
         ),
         [searchInput]
     );
@@ -49,7 +50,6 @@ export default function Homepage() {
         window.scrollTo({ top: 0 });
     };
 
-
     return (
         <Suspense>
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start animate-fade-in">
@@ -58,7 +58,7 @@ export default function Homepage() {
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col animate-fade-in">
                 <h1 className='font-bold text-white text-xl mb-2 animate-fade-in'>Search Map Here</h1>
                 <Searchbar
-                    placeholder="City, Country, or Continent only"
+                    placeholder="Example: Bangkok | Thailand | Asia | BKK"
                     value={searchInput}
                     onChange={handleSearchChange}
                 />

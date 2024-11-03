@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Data from '../assets/data.json';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+import NotFound404 from '../NotFound404';
 
 export default function Content() {
     const { cityId } = useParams();
@@ -10,7 +13,7 @@ export default function Content() {
     const navigate = useNavigate();
 
     if (!cityData) {
-        return <h1 className="text-white">City not found</h1>;
+        return <NotFound404 />;
     }
 
     const handleGoBack = () => {
@@ -22,7 +25,7 @@ export default function Content() {
 
     return (
         <>
-            <Header onclick={() => window.history.back()} />
+            <Header onclick={() => (window.location.href = "/")} />
             <div className="max-w-[1200px] mx-auto mt-10 px-5 mb-10 flex flex-col animate-fade-in">
                 <div className="flex flex-col gap-1 mb-5">
                     <h1 className="text-3xl font-bold text-white">{cityData.city}</h1>
@@ -41,10 +44,19 @@ export default function Content() {
                     <div className='flex flex-col gap-5 w-full mt-5'>
                         <button onClick={() => window.open(`./${cityData['image-id']}.${cityData['img-ext']}`, "_blank")} className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90">View Image in New Tab</button>
                         <button onClick={() => window.open(cityData["official-site"], "_blank")} className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90">Download (From External Site)</button>
-                        <button onClick={handleGoBack} className="bg-primary opacity-70 py-2 px-5 rounded-full text-[#cbcbcb] font-bold transition-all hover:opacity-100">Go Back</button>
+                        {cityData["note-link"] && (
+                            <button
+                                onClick={() => window.open(cityData["note-link"], "_blank")}
+                                className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90"
+                            >
+                                View Note Link
+                            </button>
+                        )}
+                        <button onClick={handleGoBack} className="bg-red-800 py-2 px-5 rounded-full text-white font-bold">Go Back</button>
                     </div>
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
