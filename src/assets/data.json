@@ -557,5 +557,87 @@
         "img-alt": "Rio de Janeiro transit map",
         "continent": "South America",
         "shortened": "RJ"
+    },
+    {
+        "city": "Salvador",
+        "country": "Brazil",
+        "official-site": "https://www.ccrmetrobahia.com.br/guia-do-cliente/mapas-do-metr%C3%B4/",
+        "image-id": "salvador_br",
+        "img-ext": "png",
+        "img-alt": "Salvador transit map",
+        "continent": "South America",
+        "shortened": "SSA A Cidade da Bahia"
+    },
+    {
+        "city": "Sao Paulo",
+        "country": "Brazil",
+        "official-site": "https://www.metro.sp.gov.br/",
+        "image-id": "sao_paulo",
+        "img-ext": "png",
+        "img-alt": "São Paulo transit map",
+        "continent": "South America",
+        "shortened": "SP São Paulo"
+    },
+    {
+        "city": "Sofia",
+        "country": "Bulgaria",
+        "official-site": "https://www.metropolitan.bg/shema/dejstvashto-metro",
+        "image-id": "sofia",
+        "img-ext": "jpg",
+        "img-alt": "Sofia transit map",
+        "continent": "Europe",
+        "shortened": "София"
+    },
+    {
+        "city": "Montreal",
+        "country": "Canada",
+        "official-site": "https://www.stm.info/en/info/networks/maps",
+        "image-id": "montreal",
+        "img-ext": "png",
+        "img-alt": "Montreal transit map",
+        "continent": "North America",
+        "shortened": "MTL Montréal"
+    },
+    {
+        "city": "Toronto",
+        "country": "Canada",
+        "official-site": "https://www.ttc.ca/Maps/Subway",
+        "image-id": "toronto",
+        "img-ext": "png",
+        "img-alt": "Toronto transit map",
+        "continent": "North America",
+        "shortened": "TO T.O. The 6ix"
+    },
+    {
+        "city": "Vancouver",
+        "country": "Canada",
+        "official-site": "https://www.translink.ca/schedules-and-maps/transit-system-maps",
+        "image-id": "vancouver",
+        "img-ext": "png",
+        "img-alt": "Vancouver transit map",
+        "continent": "North America",
+        "shortened": "Vancity Van"
+    },
+    {
+        "city": "Santiago",
+        "country": "Chile",
+        "official-site": "https://www.metro.cl/guia-del-usuario/experiencia-de-viaje",
+        "image-id": "santiago",
+        "img-ext": "png",
+        "img-alt": "Santiago transit map",
+        "continent": "South America",
+        "shortened": "STGO Santi"
+    },
+    {
+        "city": "Changchun",
+        "country": "China",
+        "official-site": "https://www.crczjt.com/",
+        "image-id": "changchun",
+        "img-ext": "png",
+        "img-alt": "Changchun transit map",
+        "continent": "Asia",
+        "shortened": "CC 长春 春城",
+        "note": "The map is not official. It was made by: UrbanRail.net. I chose this because it is the latest map available.",
+        "note-link": "https://www.urbanrail.net/as/cn/chan/changchun.htm"
     }
 ]
