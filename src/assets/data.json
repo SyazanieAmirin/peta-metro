@@ -537,5 +537,25 @@
         "shortened": "POA",
         "note": "The map is not official. It was made by: SenhorSlime. Colours are modified for easier viewing on dark mode.",
         "note-link": "https://en.wikipedia.org/wiki/Porto_Alegre_Metro#/media/File:Trensurb_-_Linha_1_-_2024.svg"
+    },
+    {
+        "city": "Recife",
+        "country": "Brazil",
+        "official-site": "https://www.gov.br/cbtu/pt-br/servicos/cbtu-recife/mapa-da-linha",
+        "image-id": "recife",
+        "img-ext": "jpg",
+        "img-alt": "Recife transit map",
+        "continent": "South America",
+        "shortened": "REC Récife"
+    },
+    {
+        "city": "Rio de Janeiro",
+        "country": "Brazil",
+        "official-site": "https://www.metrorio.com.br/pt-br/mapa-do-metro",
+        "image-id": "rio_de_janeiro",
+        "img-ext": "png",
+        "img-alt": "Rio de Janeiro transit map",
+        "continent": "South America",
+        "shortened": "RJ"
     }
 ]
