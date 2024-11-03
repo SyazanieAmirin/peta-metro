@@ -525,5 +525,17 @@
         "note": "The map is not official. It was made by: Laura Sun. Colours are modified for easier viewing on dark mode.",
         "note-link": "https://en.wikipedia.org/wiki/Fortaleza_Metro#/media/File:Fortaleza_2014.svg",
         "shortened": "Forta"
+    },
+    {
+        "city": "Porto Alegre",
+        "country": "Brazil",
+        "official-site": "https://www.trensurb.gov.br/",
+        "image-id": "porto_alegre",
+        "img-ext": "svg",
+        "img-alt": "Porto Alegre transit map",
+        "continent": "South America",
+        "shortened": "POA",
+        "note": "The map is not official. It was made by: SenhorSlime. Colours are modified for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Porto_Alegre_Metro#/media/File:Trensurb_-_Linha_1_-_2024.svg"
     }
 ]
