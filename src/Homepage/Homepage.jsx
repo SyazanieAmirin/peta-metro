@@ -8,10 +8,12 @@ const Content = lazy(() => import('../Content/Content'));
 import Footer from '../Footer/Footer';
 import Data from '../assets/data.json';
 
+import { FaChevronLeft } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
+
 export default function Homepage() {
     const [selectedCity, setSelectedCity] = useState(null);
     const [searchInput, setSearchInput] = useState('');
-    const [debouncedSearchInput, setDebouncedSearchInput] = useState(searchInput);
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 15;  // Show 15 items per page
 
@@ -45,10 +47,41 @@ export default function Homepage() {
     // Calculate total pages
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
 
+    const maxVisiblePages = 5;  // Maximum number of visible page buttons
+
+    const [visibleRange, setVisibleRange] = useState({ start: 0, end: maxVisiblePages });
+
+    useEffect(() => {
+        // Reset visible range when search input changes
+        setVisibleRange({ start: 0, end: maxVisiblePages });
+    }, [searchInput]);
+
     const handlePageChange = (page) => {
         setCurrentPage(page);
         window.scrollTo({ top: 0 });
+
+        // Adjust visible range if the current page is near the edges
+        if (page > visibleRange.end) {
+            setVisibleRange({ start: visibleRange.start + 1, end: visibleRange.end + 1 });
+        } else if (page < visibleRange.start + 1) {
+            setVisibleRange({ start: visibleRange.start - 1, end: visibleRange.end - 1 });
+        }
     };
+
+    // Move range left or right when arrows are clicked
+    const handleLeftArrow = () => {
+        if (visibleRange.start > 0) {
+            setVisibleRange({ start: visibleRange.start - 1, end: visibleRange.end - 1 });
+        }
+    };
+
+    const handleRightArrow = () => {
+        if (visibleRange.end < totalPages) {
+            setVisibleRange({ start: visibleRange.start + 1, end: visibleRange.end + 1 });
+        }
+    };
+
+
 
     return (
         <Suspense>
@@ -113,16 +146,37 @@ export default function Homepage() {
 
 
                 <div className="flex justify-center mt-5">
-                    {Array.from({ length: totalPages }, (_, i) => (
+                    {visibleRange.start > 0 && (
                         <button
-                            key={i + 1}
-                            onClick={() => handlePageChange(i + 1)}
-                            className={`px-4 py-2 mx-1 rounded-full font-bold ${i + 1 === currentPage ? 'bg-primary text-white' : 'bg-gray-300 transition-all hover:opacity-70'}`}
+                            onClick={handleLeftArrow}
+                            className="px-3 py-2 mx-1 rounded-full font-bold bg-gray-100 transition-all hover:opacity-70"
                         >
-                            {i + 1}
+                            <FaChevronLeft />
                         </button>
-                    ))}
+                    )}
+
+                    {Array.from({ length: totalPages }, (_, i) => i + 1)
+                        .slice(visibleRange.start, visibleRange.end)
+                        .map((page) => (
+                            <button
+                                key={page}
+                                onClick={() => handlePageChange(page)}
+                                className={`px-4 py-2 mx-1 rounded-full font-bold ${page === currentPage ? 'bg-primary text-white' : 'bg-gray-400 transition-all hover:opacity-70'}`}
+                            >
+                                {page}
+                            </button>
+                        ))}
+
+                    {visibleRange.end < totalPages && (
+                        <button
+                            onClick={handleRightArrow}
+                            className="px-3 py-2 mx-1 rounded-full font-bold bg-gray-100 transition-all hover:opacity-70"
+                        >
+                            <FaChevronRight />
+                        </button>
+                    )}
                 </div>
+
             </div>
             <Footer />
         </Suspense>

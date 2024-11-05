@@ -819,5 +819,111 @@
         "shortened": "JN 济南 泉城路",
         "note": "The map is not official. It was made by: Houseyoung.",
         "note-link": "https://en.wikipedia.org/wiki/Jinan_Metro#/media/File:Jinan_Metro_Map.png"
+    },
+    {
+        "city": "Jinhua",
+        "country": "China",
+        "official-site": "http://jhrailtransit.com/",
+        "image-id": "jinhua",
+        "img-ext": "png",
+        "img-alt": "Jinhua transit map",
+        "continent": "Asia",
+        "shortened": "JH 金华 义乌",
+        "note": "The map is not official. It was made by: UrbanRail.net.",
+        "note-link": "https://www.urbanrail.net/as/cn/jinhua/jinhua.htm"
+    },
+    {
+        "city": "Kunming",
+        "country": "China",
+        "official-site": "https://www.kmrmtr.com/",
+        "image-id": "kunming",
+        "img-ext": "svg",
+        "img-alt": "Kunming transit map",
+        "continent": "Asia",
+        "shortened": "KM 昆明 东风广场",
+        "note": "The map is not official. It was made by: Kmchang28. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Kunming_Metro#/media/File:Kunming_Metro_System_Map.svg"
+    },
+    {
+        "city": "Lanzhou",
+        "country": "China",
+        "official-site": "https://www.lzgdjt.com/lzgd/",
+        "image-id": "lanzhou",
+        "img-ext": "svg",
+        "img-alt": "Lanzhou transit map",
+        "continent": "Asia",
+        "shortened": "LZ 兰州 五泉山",
+        "note": "The map is not official. It was made by: Painjet.",
+        "note-link": "https://en.wikipedia.org/wiki/Lanzhou_Metro#/media/File:Lanzhou_Metro_Map.svg"
+    },
+    {
+        "city": "Luoyang",
+        "country": "China",
+        "official-site": "https://www.lymetro.net/",
+        "image-id": "luoyang",
+        "img-ext": "png",
+        "img-alt": "Luoyang transit map",
+        "continent": "Asia",
+        "shortened": "LY 洛阳 龙门",
+        "note": "The map is not official. It was made by: Windmemories",
+        "note-link": "https://en.wikipedia.org/wiki/Luoyang_Subway#/media/File:System_Map_of_Luoyang_Metro.png/2"
+    },
+    {
+        "city": "Macau",
+        "country": "China",
+        "official-site": "https://www.mlm.com.mo/en/route.html",
+        "image-id": "macau",
+        "img-ext": "png",
+        "img-alt": "Macau transit map",
+        "continent": "Asia",
+        "shortened": "澳门 澳門"
+    },
+    {
+        "city": "Nanchang",
+        "country": "China",
+        "official-site": "https://www.ncmetro.com/",
+        "image-id": "nanchang",
+        "img-ext": "svg",
+        "img-alt": "Nanchang transit map",
+        "continent": "Asia",
+        "shortened": "NC 南昌 红谷滩",
+        "note": "The map is not official. It was made by: Kmchang28. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Nanchang_Metro#/media/File:Nanchang_Metro_Route_Map.svg"
+    },
+    {
+        "city": "Nanjing",
+        "country": "China",
+        "official-site": "http://www.njmetro.com.cn/",
+        "image-id": "nanjing",
+        "img-ext": "png",
+        "img-alt": "Nanjing transit map",
+        "continent": "Asia",
+        "shortened": "NJ 南京 鼓楼",
+        "note": "The map is not official. It was made by: Alan Fan Pei.",
+        "note-link": "https://en.wikipedia.org/wiki/Nanjing_Metro#/media/File:Nanjing_Metro_Network.png/2"
+    },
+    {
+        "city": "Nanning",
+        "country": "China",
+        "official-site": "https://www.nnmetro.com.cn/",
+        "image-id": "nanning",
+        "img-ext": "png",
+        "img-alt": "Nanning transit map",
+        "continent": "Asia",
+        "shortened": "NN 南宁 东盟商务区",
+        "note": "The map is not official. It was made by: Painjet.",
+        "note-link": "https://en.wikipedia.org/wiki/Nanning_Metro#/media/File:Nanning_Rail_Transit_Diagram.png/2"
+    },
+    {
+        "city": "Nantong",
+        "country": "China",
+        "official-site": "https://www.ntmetro.com/",
+        "image-id": "nantong",
+        "img-ext": "svg",
+        "img-alt": "Nantong transit map",
+        "continent": "Asia",
+        "shortened": "NT 南通 中兴大道",
+        "note": "The map is not official. It was made by: Yveltal.",
+        "note-link": "https://en.wikipedia.org/wiki/Nantong_Rail_Transit#/media/File:Nantong_Rail_Transit_Planning.svg/2"
     }
 ]
