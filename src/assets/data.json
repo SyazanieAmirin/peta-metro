@@ -925,5 +925,77 @@
         "shortened": "NT 南通 中兴大道",
         "note": "The map is not official. It was made by: Yveltal.",
         "note-link": "https://en.wikipedia.org/wiki/Nantong_Rail_Transit#/media/File:Nantong_Rail_Transit_Planning.svg/2"
+    },
+    {
+        "city": "Ningbo",
+        "country": "China",
+        "official-site": "https://www.nbmetro.com/",
+        "image-id": "ningbo",
+        "img-ext": "svg",
+        "img-alt": "Ningbo transit map",
+        "continent": "Asia",
+        "shortened": "NB 宁波 东部新城",
+        "note": "The map is not official. It was made by: Siyuwj",
+        "note-link": "https://en.wikipedia.org/wiki/Ningbo_Rail_Transit#/media/File:Ningbo_Rail_Transit_System_Map_en.svg"
+    },
+    {
+        "city": "Qingdao",
+        "country": "China",
+        "official-site": "http://www.qd-metro.com/",
+        "image-id": "qingdao",
+        "img-ext": "svg",
+        "img-alt": "Qingdao transit map",
+        "continent": "Asia",
+        "shortened": "QD 青岛 奥帆中心",
+        "note": "The map is not official. It was made by: Painjet.",
+        "note-link": "https://en.wikipedia.org/wiki/Qingdao_Metro#/media/File:Qingdao_Metro_Map_en.svg"
+    },
+    {
+        "city": "Shanghai",
+        "country": "China",
+        "official-site": "https://service.shmetro.com/en/",
+        "image-id": "shanghai",
+        "img-ext": "png",
+        "img-alt": "Shanghai transit map",
+        "continent": "Asia",
+        "shortened": "SH 上海 陆家嘴",
+        "note": "The map is not official. It was made by: Alan Fan Pei.",
+        "note-link": "https://en.wikipedia.org/wiki/Shanghai_Metro#/media/File:Shanghai_Metro_Network_en.png"
+    },
+    {
+        "city": "Shaoxing",
+        "country": "China",
+        "official-site": "https://www.sxmetro.com/",
+        "image-id": "shaoxing",
+        "img-ext": "svg",
+        "img-alt": "Shaoxing transit map",
+        "continent": "Asia",
+        "shortened": "SX 绍兴 东湖公园",
+        "note": "The map is not official. It was made by: 刻晴",
+        "note-link": "https://en.wikipedia.org/wiki/Shaoxing_Metro#/media/File:Shaoxing_Metro_System_Map.svg"
+    },
+    {
+        "city": "Shenyang",
+        "country": "China",
+        "official-site": "https://www.symtc.com/",
+        "image-id": "shenyang",
+        "img-ext": "svg",
+        "img-alt": "Shenyang transit map",
+        "continent": "Asia",
+        "shortened": "SY 沈阳 五里河",
+        "note": "The map is not official. It was made by: Painjet.",
+        "note-link": "https://en.wikipedia.org/wiki/Shenyang_Metro#/media/File:Shenyang_Metro_System_Map.svg/2"
+    },
+    {
+        "city": "Shenzhen",
+        "country": "China",
+        "official-site": "https://www.szmc.net/",
+        "image-id": "shenzhen",
+        "img-ext": "png",
+        "img-alt": "Shenzhen transit map",
+        "continent": "Asia",
+        "shortened": "SZ 深圳 福田",
+        "note": "The map is not official. It was made by: Wahsaw.",
+        "note-link": "https://en.wikipedia.org/wiki/Shenzhen_Metro#/media/File:Shenzhen_Metro_(Rapid_Transit)_System_Map.png"
     }
 ]
