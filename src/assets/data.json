@@ -1165,5 +1165,79 @@
         "shortened": "ZZ 漳州 东山",
         "note": "The map is not official. It was made by: Windmemories",
         "note-link": "https://en.wikipedia.org/wiki/Zhengzhou_Metro#/media/File:System_Map_of_Zhengzhou_Metro_(with_realistic_scale).png"
+    },
+    {
+        "city": "Medellin",
+        "country": "Colombia",
+        "official-site": "https://www.metrodemedellin.gov.co/en/travel-with-us/maps",
+        "image-id": "medellin",
+        "img-ext": "jpg",
+        "img-alt": "Medellín transit map",
+        "continent": "South America",
+        "shortened": "MDE Medellín"
+    },
+    {
+        "city": "Prague",
+        "country": "Czech Republic",
+        "official-site": "https://www.dpp.cz/en/timetables/traffic-scheme",
+        "image-id": "prague",
+        "img-ext": "png",
+        "img-alt": "Prague transit map",
+        "continent": "Europe",
+        "shortened": "Praha"
+    },
+    {
+        "city": "Copehagen",
+        "country": "Denmark",
+        "official-site": "https://www.m.dk/kort",
+        "image-id": "copenhagen",
+        "img-ext": "png",
+        "img-alt": "Copenhagen transit map",
+        "continent": "Europe",
+        "shortened": "CPH København"
+    },
+    {
+        "city": "Santo Domingo",
+        "country": "Dominican Republic",
+        "official-site": "https://opret.gob.do/Servicios/Transportaci%C3%B3n",
+        "image-id": "santo_domingo",
+        "img-ext": "jpg",
+        "img-alt": "Santo Domingo transit map",
+        "continent": "North America",
+        "shortened": "SDQ"
+    },
+    {
+        "city": "Quito",
+        "country": "Ecuador",
+        "official-site": "https://metrodequito.gob.ec/estaciones/",
+        "image-id": "quito",
+        "img-ext": "svg",
+        "img-alt": "Quito transit map",
+        "continent": "South America",
+        "shortened": "UIO",
+        "note": "The map is not official. It was made by: Antonio Eco.",
+        "note-link": "https://en.wikipedia.org/wiki/Quito_Metro#/media/File:Quito_Metro,_Map.svg"
+    },
+    {
+        "city": "Cairo",
+        "country": "Egypt",
+        "official-site": "https://cairometro.gov.eg/",
+        "image-id": "cairo",
+        "img-ext": "jpg",
+        "img-alt": "Cairo transit map",
+        "continent": "Africa",
+        "shortened": "CAI القاهرة",
+        "note": "The map is not official. It was made by: X49",
+        "note-link": "https://en.wikipedia.org/wiki/Cairo_Metro#/media/File:CAIRO_METRO.jpg"
+    },
+    {
+        "city": "Helsinki",
+        "country": "Finland",
+        "official-site": "https://kaupunkiliikenne.fi/en/transport/by-metro/",
+        "image-id": "helsinki",
+        "img-ext": "png",
+        "img-alt": "Helsinki transit map",
+        "continent": "Europe",
+        "shortened": "HEL Helsingfors"
     }
 ]
