@@ -1250,5 +1250,65 @@
         "continent": "North America",
         "shortened": "The L",
         "note": "This is for my close friend, Imatu!"
+    },
+    {
+        "city": "Lille",
+        "country": "France",
+        "official-site": "https://www.ilevia.fr/",
+        "image-id": "lille",
+        "img-ext": "svg",
+        "img-alt": "Lille transit map",
+        "continent": "Europe",
+        "shortened": "LIL",
+        "note": "The map is not official. It was made by: Sardon. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Lille_Metro#/media/File:Map_of_Lille_metro_lines_1_and_2.svg"
+    },
+    {
+        "city": "Lyon",
+        "country": "France",
+        "official-site": "https://www.tcl.fr/en/journey-planner/interactive-map",
+        "image-id": "lyon",
+        "img-ext": "png",
+        "img-alt": "Lyon transit map",
+        "continent": "Europe",
+        "shortened": "LYS",
+        "note": "The map is not official. It was made by: Arielthere",
+        "note-link": "https://en.wikipedia.org/wiki/Lyon_Metro#/media/File:Carte_transports_Lyon_juillet_2022_version_2.png"
+    },
+    {
+        "city": "Marseille",
+        "country": "France",
+        "official-site": "https://www.rtm.fr/en/plans",
+        "image-id": "marseille",
+        "img-ext": "svg",
+        "img-alt": "Marseille transit map",
+        "continent": "Europe",
+        "shortened": "MRS",
+        "note": "The map is not official. It was made by: Superbenjamin",
+        "note-link": "https://en.wikipedia.org/wiki/Marseille_Metro#/media/File:M%C3%A9tro_de_Marseille.svg"
+    },
+    {
+        "city": "Rennes",
+        "country": "France",
+        "official-site": "https://data.rennesmetropole.fr/explore/?refine.theme=Mobilit%C3%A9,+Transport&sort=modified",
+        "image-id": "rennes",
+        "img-ext": "svg",
+        "img-alt": "Rennes transit map",
+        "continent": "Europe",
+        "shortened": "RNS",
+        "note": "The map is not official. It was made by: Flappiefh.",
+        "note-link": "https://en.wikipedia.org/wiki/Rennes_Metro#/media/File:Lignes_de_m%C3%A9tro_de_Rennes.svg"
+    },
+    {
+        "city": "Toulouse",
+        "country": "France",
+        "official-site": "https://www.tisseo.fr/en/tisseo-network",
+        "image-id": "toulouse",
+        "img-ext": "svg",
+        "img-alt": "Toulouse transit map",
+        "continent": "Europe",
+        "shortened": "TLS",
+        "note": "The map is not official. It was made by: Sémhur. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Toulouse_Metro#/media/File:Plan_m%C3%A9tro_Toulouse.svg"
     }
 ]
