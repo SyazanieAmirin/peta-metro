@@ -1239,5 +1239,16 @@
         "img-alt": "Helsinki transit map",
         "continent": "Europe",
         "shortened": "HEL Helsingfors"
+    },
+    {
+        "city": "Chicago",
+        "country": "United States",
+        "official-site": "https://www.transitchicago.com/maps/",
+        "image-id": "chicago",
+        "img-ext": "png",
+        "img-alt": "Chicago transit map",
+        "continent": "North America",
+        "shortened": "The L",
+        "note": "This is for my close friend, Imatu!"
     }
 ]
