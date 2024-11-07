@@ -15,7 +15,7 @@ export default function Homepage() {
     const [selectedCity, setSelectedCity] = useState(null);
     const [searchInput, setSearchInput] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 15;  // Show 15 items per page
+    const itemsPerPage = 25;  // Show 15 items per page
 
     const handleDownload = (website) => {
         window.open(website, "_blank");
