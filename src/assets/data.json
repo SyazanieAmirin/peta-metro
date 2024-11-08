@@ -1310,5 +1310,111 @@
         "shortened": "TLS",
         "note": "The map is not official. It was made by: Sémhur. Modified colours for easier viewing on dark mode.",
         "note-link": "https://en.wikipedia.org/wiki/Toulouse_Metro#/media/File:Plan_m%C3%A9tro_Toulouse.svg"
+    },
+    {
+        "city": "Tbilisi",
+        "country": "Georgia",
+        "official-site": "https://transit.ttc.com.ge/#/plan?setLng=en",
+        "image-id": "tbilisi",
+        "img-ext": "svg",
+        "img-alt": "Tbilisi transit map",
+        "continent": "Asia",
+        "shortened": "TBS თბილისი",
+        "note": "The map is not official. It was made by: Giorgi Balakhadze",
+        "note-link": "https://en.wikipedia.org/wiki/Tbilisi_Metro#/media/File:Map_of_Tbilisi_Metro_-_%E1%83%97%E1%83%91%E1%83%98%E1%83%9A%E1%83%98%E1%83%A1%E1%83%98%E1%83%A1_%E1%83%9B%E1%83%94%E1%83%A2%E1%83%A0%E1%83%9D%E1%83%A1_%E1%83%A0%E1%83%A3%E1%83%99%E1%83%90.svg"
+    },
+    {
+        "city": "Athens",
+        "country": "Greece",
+        "official-site": "https://www.stasy.gr/en/timetables/map/",
+        "image-id": "athens",
+        "img-ext": "png",
+        "img-alt": "Athens transit map",
+        "continent": "Europe",
+        "shortened": "ATH Αθήνα"
+    },
+    {
+        "city": "Agra",
+        "country": "India",
+        "official-site": "https://www.lmrcl.com/agra-metro/route-map",
+        "image-id": "agra",
+        "img-ext": "png",
+        "img-alt": "Agra transit map",
+        "continent": "Asia",
+        "shortened": "AGA आगरा"
+    },
+    {
+        "city": "Ahmedabad",
+        "country": "India",
+        "official-site": "https://www.gujaratmetrorail.com/",
+        "image-id": "ahmedabad",
+        "img-ext": "png",
+        "img-alt": "Ahmedabad transit map",
+        "continent": "Asia",
+        "shortened": "AMD અમદાવાદ",
+        "note": "The map is not official. It was made by: UrbanRail.net.",
+        "note-link": "https://urbanrail.net/as/in/ahmedabad/ahmedabad.htm"
+    },
+    {
+        "city": "Lucknow",
+        "country": "India",
+        "official-site": "https://lmrcl.com/passengerinfo/lucknow-metro-route-map/",
+        "image-id": "lucknow",
+        "img-ext": "svg",
+        "img-alt": "Lucknow transit map",
+        "continent": "Asia",
+        "shortened": "LKO लखनऊ",
+        "note": "The map is not official. It was made by: Wikiboy2364. Modified colours for easier viewing on dark mode.",
+        "note-link": "https://en.wikipedia.org/wiki/Lucknow_Metro#/media/File:Lucknow_Metro_Route_Map_(Tentative).svg"
+    },
+    {
+        "city": "Namma (Bengaluru)",
+        "country": "India",
+        "official-site": "https://english.bmrc.co.in/schematic-route-map/",
+        "image-id": "namma",
+        "img-ext": "jpg",
+        "img-alt": "Namma transit map",
+        "continent": "Asia",
+        "shortened": "BLR ಬೆಂಗಳೂರು"
+    },
+    {
+        "city": "Chennai",
+        "country": "India",
+        "official-site": "https://wcag.chennaimetrorail.org/metro-line-map/",
+        "image-id": "chennai",
+        "img-ext": "svg",
+        "img-alt": "Chennai transit map",
+        "continent": "Asia",
+        "shortened": "MAA சென்னை"
+    },
+    {
+        "city": "Delhi",
+        "country": "India",
+        "official-site": "https://delhimetrorail.com/network_map",
+        "image-id": "delhi",
+        "img-ext": "png",
+        "img-alt": "Delhi transit map",
+        "continent": "Asia",
+        "shortened": "DEL दिल्ली Gurgaon गुड़गांव"
+    },
+    {
+        "city": "Gurgaon",
+        "country": "India",
+        "official-site": "https://delhimetrorail.com/rapid-metro",
+        "image-id": "gurgaon",
+        "img-ext": "jpg",
+        "img-alt": "Gurgaon transit map",
+        "continent": "Asia",
+        "shortened": "GUR गुड़गांव delhi दिल्ली"
+    },
+    {
+        "city": "Hyderabad",
+        "country": "India",
+        "official-site": "https://www.ltmetro.com/metro-network-map/",
+        "image-id": "hyderabad",
+        "img-ext": "png",
+        "img-alt": "Hyderabad transit map",
+        "continent": "Asia",
+        "shortened": "HYD హైదరాబాదు"
     }
 ]
