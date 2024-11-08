@@ -1416,5 +1416,38 @@
         "img-alt": "Hyderabad transit map",
         "continent": "Asia",
         "shortened": "HYD హైదరాబాదు"
+    },
+    {
+        "city": "Jaipur",
+        "country": "India",
+        "official-site": "https://transport.rajasthan.gov.in/content/transportportal/en/metro/PassengerInformation/MetroStations.html",
+        "image-id": "jaipur",
+        "img-ext": "png",
+        "img-alt": "Jaipur transit map",
+        "continent": "Asia",
+        "shortened": "JAI जयपुर"
+    },
+    {
+        "city": "Kanpur",
+        "country": "India",
+        "official-site": "https://lmrcl.com/passengerinfo/kanpur-metro-route-map/",
+        "image-id": "kanpur",
+        "img-ext": "png",
+        "img-alt": "Kanpur transit map",
+        "continent": "Asia",
+        "shortened": "KNU कानपुर",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/as/in/kanpur/kanpur.htm"
+    },
+    {
+        "city": "Kochi",
+        "country": "India",
+        "official-site": "https://kochimetro.org/",
+        "image-id": "kochi",
+        "img-ext": "png",
+        "continent": "Asia",
+        "shortened": "COK കൊച്ചി",
+        "note": "The map is not official. It was made by: Saneef Ansari",
+        "note-link": "https://en.wikipedia.org/wiki/List_of_Kochi_Metro_stations#/media/File:Kochi_Metro_Map.png"
     }
 ]
