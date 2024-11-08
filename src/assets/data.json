@@ -16,7 +16,8 @@
         "image-id": "jakarta",
         "img-ext": "jpg",
         "img-alt": "Jakarta transit map",
-        "continent": "Asia"
+        "continent": "Asia",
+        "shortened": "JKT Jabodebek"
     },
     {
         "city": "Bangkok",
@@ -1449,5 +1450,70 @@
         "shortened": "COK കൊച്ചി",
         "note": "The map is not official. It was made by: Saneef Ansari",
         "note-link": "https://en.wikipedia.org/wiki/List_of_Kochi_Metro_stations#/media/File:Kochi_Metro_Map.png"
+    },
+    {
+        "city": "Kolkata",
+        "country": "India",
+        "official-site": "https://www.kmrc.in/",
+        "image-id": "kolkata",
+        "img-ext": "png",
+        "img-alt": "Kolkata transit map",
+        "continent": "Asia",
+        "shortened": "CCU কলকাতা",
+        "note": "The map is not official. It was made by: Mahafujalam6131",
+        "note-link": "https://en.wikipedia.org/wiki/List_of_Kolkata_Metro_stations#/media/File:Kolkata_Metro.png"
+    },
+    {
+        "city": "Mumbai",
+        "country": "India",
+        "official-site": "https://www.mmrcl.com/en/metro-line-3",
+        "image-id": "mumbai",
+        "img-ext": "svg",
+        "img-alt": "Mumbai transit map",
+        "continent": "Asia",
+        "shortened": "BOM मुंबई",
+        "note": "The map is not official. It was made by: Mb1996, Chumwa, Gaurav",
+        "note-link": "https://en.wikipedia.org/wiki/Mumbai_Metro#/media/File:Mumbai_Metro_and_Suburban_Railway_Schematic_Map.svg"
+    },
+    {
+        "city": "Nagpur",
+        "country": "India",
+        "official-site": "https://www.maha-metro.com/",
+        "image-id": "nagpur",
+        "img-ext": "png",
+        "img-alt": "Nagpur transit map",
+        "continent": "Asia",
+        "shortened": "NAG नागपुर"
+    },
+    {
+        "city": "Navi Mumbai",
+        "country": "India",
+        "official-site": "https://www.nmmimetro.com/",
+        "image-id": "navi_mumbai",
+        "img-ext": "png",
+        "img-alt": "Navi Mumbai transit map",
+        "continent": "Asia",
+        "shortened": "BOM मुंबई",
+        "note": "The map is not official. It was made by: Yellow alligator",
+        "note-link": "https://en.wikipedia.org/wiki/Navi_Mumbai_Metro#/media/File:Navi_Mumbai_Metro_Map.png"
+    },
+    {
+        "city": "Pune",
+        "country": "India",
+        "official-site": "https://www.punemetrorail.org/",
+        "image-id": "pune",
+        "img-ext": "jpg",
+        "continent": "Asia",
+        "shortened": "PNQ पुणे"
+    },
+    {
+        "city": "Jabodebek",
+        "country": "Indonesia",
+        "official-site": "https://www.jakartamrt.co.id/",
+        "image-id": "jabodebek",
+        "img-ext": "webp",
+        "img-alt": "Jabodebek transit map",
+        "continent": "Asia",
+        "shortened": "JKT Jakarta"
     }
 ]
