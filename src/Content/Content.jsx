@@ -77,7 +77,7 @@ export default function Content() {
                                                 alt={city['img-alt']}
                                                 className="rounded-lg w-full h-72 transition-all hover:opacity-80"
                                             />
-                                            <p className="text-white text-center font-bold mt-2">{city.city} | {cityData.country}</p>
+                                            <p className="text-white text-center font-bold mt-2">{city.city} | {city.country}</p>
                                         </button>
 
                                     </div>
