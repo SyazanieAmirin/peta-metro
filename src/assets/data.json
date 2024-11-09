@@ -1515,5 +1515,41 @@
         "img-alt": "Jabodebek transit map",
         "continent": "Asia",
         "shortened": "JKT Jakarta"
+    },
+    {
+        "city": "Palembang",
+        "country": "Indonesia",
+        "official-site": "https://www.lrtsumsel.com/",
+        "image-id": "palembang",
+        "img-ext": "webp",
+        "img-alt": "Palembang transit map",
+        "continent": "Asia",
+        "shortened": "PLM",
+        "note": "The map is not official. It was made by: u/Lintar0.",
+        "note-link": "https://www.reddit.com/r/TransitDiagrams/comments/d7sqr9/map_of_public_transport_in_the_city_of_palembang/?rdt=35723"
+    },
+    {
+        "city": "Isfahan",
+        "country": "Iran",
+        "official-site": "https://isfahanmetro.ir/",
+        "image-id": "isfahan",
+        "img-ext": "png",
+        "img-alt": "Isfahan transit map",
+        "continent": "Asia",
+        "shortened": "IFN اصفهان",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/as/ir/isfa/isfahan.htm"
+    },
+    {
+        "city": "Mashhad",
+        "country": "Iran",
+        "official-site": "https://www.mashhadmetro.ir/",
+        "image-id": "mashhad",
+        "img-ext": "png",
+        "img-alt": "Mashhad transit map",
+        "continent": "Asia",
+        "shortened": "MHD مشهد",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/as/ir/mash/mashhad.htm"
     }
 ]
