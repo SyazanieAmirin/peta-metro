@@ -47,7 +47,7 @@ export default function MobileNavbarOpened({ isOpen, setIsMenuOpen, navbarItems 
                 ))}
             </div>
             <div className='flex flex-row justify-center mt-auto mb-28 gap-2'>
-                <a className="text-white font-bold text-md" href='https://syazanie.com' target='_blank'>Created by <span className='text-blue-200'>Syazanie Amirin | V1.3.8.1</span></a>
+                <a className="text-white font-bold text-md" href='https://syazanie.com' target='_blank'>Created by <span className='text-blue-200'>Syazanie Amirin | V1.3.8.2</span></a>
                 <a href="https://github.com/SyazanieAmirin/peta-metro" target='_blank'>
                     <img src={GithubIcon} alt="Github Logo" className="h-5 w-5 hover:scale-90 hover:cursor-pointer" />
                 </a>

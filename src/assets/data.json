@@ -1551,5 +1551,29 @@
         "shortened": "MHD مشهد",
         "note": "The map is not official. It was made by: UrbanRail.net",
         "note-link": "https://www.urbanrail.net/as/ir/mash/mashhad.htm"
+    },
+    {
+        "city": "Shiraz",
+        "country": "Iran",
+        "official-site": "http://shirazmetro.ir/",
+        "image-id": "shiraz",
+        "img-ext": "png",
+        "img-alt": "Shiraz transit map",
+        "continent": "Asia",
+        "shortened": "SYZ شیراز",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/as/ir/shir/shiraz.htm"
+    },
+    {
+        "city": "Karaj",
+        "country": "Iran",
+        "official-site": "https://www.karajmetro.ir/",
+        "image-id": "karaj",
+        "img-ext": "png",
+        "img-alt": "Karaj transit map",
+        "continent": "Asia",
+        "shortened": "کرج",
+        "note": "The map is not official. It was made by: UrbanRail.net",
+        "note-link": "https://www.urbanrail.net/as/ir/karaj/karaj.htm"
     }
 ]
