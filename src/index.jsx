@@ -6,6 +6,7 @@ import Homepage from './Homepage/Homepage';
 import Contact from './Contact/Contact';
 import Content from './Content/Content'; // Import CityPage
 import './index.css';
+import Admin from './Admin/Admin';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/:cityId" element={<Content />} /> {/* Dynamic route */}
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </Router>
   </React.StrictMode>
