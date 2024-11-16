@@ -1,35 +1,87 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Data from '../assets/data.json';
+import Supabase from '../Supabase';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import NotFound404 from '../NotFound404';
 
 export default function Content() {
     const { cityId } = useParams();
-    const cityData = Data.find(city => city['image-id'] === cityId);
+    const [cityData, setCityData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [imageLoading, setImageLoading] = useState(true);
+    const [thumbnailLoading, setThumbnailLoading] = useState(true);
+    const [imageUrl, setImageUrl] = useState('');
+    const [thumbnailUrls, setThumbnailUrls] = useState({});
     const [randomCities, setRandomCities] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (!cityData) return;
-        // Scroll to top on load
-        window.scrollTo({ top: 0 });
+        const fetchCityData = async () => {
+            const { data: city, error } = await Supabase
+                .from('cities')
+                .select('*')
+                .eq('image-id', cityId)
+                .single();
 
-        // Pick 4 random cities, excluding the current city
-        const otherCities = Data.filter(city => city['image-id'] !== cityId);
-        const shuffledCities = otherCities.sort(() => 0.5 - Math.random());
-        setRandomCities(shuffledCities.slice(0, 4));
+            if (error) {
+                console.error("Error fetching city data:", error);
+                setLoading(false);
+                return;
+            }
+
+            setCityData(city);
+
+            // Fetch the main image URL
+            const { data: imagePublicUrl, error: imageError } = Supabase
+                .storage
+                .from('cities_maps')
+                .getPublicUrl(`${city['image-id']}.${city['img-ext']}`);
+            if (!imageError) {
+                setImageUrl(imagePublicUrl.publicUrl);
+            }
+
+            // Fetch random cities excluding the current one
+            const { data: otherCities, error: randomError } = await Supabase
+                .from('cities')
+                .select('*')
+                .neq('image-id', cityId)
+                .limit(4);
+
+            if (!randomError) {
+                setRandomCities(otherCities);
+
+                // Fetch thumbnail URLs
+                const thumbnails = {};
+                await Promise.all(
+                    otherCities.map(async (city) => {
+                        const { data: thumbUrl, error: thumbError } = Supabase
+                            .storage
+                            .from('cities_maps')
+                            .getPublicUrl(`${city['image-id']}_thumb.webp`);
+                        if (!thumbError) {
+                            thumbnails[city['image-id']] = thumbUrl.publicUrl;
+                        }
+                    })
+                );
+                setThumbnailUrls(thumbnails);
+                setThumbnailLoading(false);
+            }
+
+            setLoading(false);
+        };
+
+        fetchCityData();
     }, [cityId]);
+
+    // Ensure all loading states are handled
+    const isLoading = loading || imageLoading || thumbnailLoading;
+
+    const handleGoBack = () => navigate("/");
 
     if (!cityData) {
         return <NotFound404 />;
     }
-
-    const handleGoBack = () => {
-        navigate("/");
-    };
 
     return (
         <>
@@ -38,20 +90,32 @@ export default function Content() {
                 <div className="flex flex-col gap-1 mb-5">
                     <h1 className="text-3xl font-bold text-white">{cityData.city}</h1>
                     <h2 className="text-white/60 mb-5">{cityData.country} | {cityData.continent}</h2>
-                    {loading && <div className="w-full h-svh bg-primary rounded-lg animate-pulse"></div>}
-                    <img
-                        src={`./${cityData['image-id']}.${cityData['img-ext']}`}
-                        alt={cityData['img-alt']}
-                        className="rounded-lg mb-3 animate-fade-in"
-                        onLoad={() => setLoading(false)}
-                        style={{ display: loading ? 'none' : 'block' }}
-                    />
+                    {isLoading && <div className="w-full h-svh bg-primary rounded-lg animate-pulse"></div>}
+                    {imageUrl && (
+                        <img
+                            src={imageUrl}
+                            alt={cityData['img-alt']}
+                            className="rounded-lg mb-3 animate-fade-in"
+                            onLoad={() => setImageLoading(false)}
+                            style={{ display: imageLoading ? 'none' : 'block' }}
+                        />
+                    )}
 
                     {cityData.note && <p className="text-white mb-5 font-bold text-center">Note: {cityData.note}</p>}
 
-                    <div className='flex flex-col gap-5 w-full mt-5'>
-                        <button onClick={() => window.open(`./${cityData['image-id']}.${cityData['img-ext']}`, "_blank")} className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90">View Image in New Tab</button>
-                        <button onClick={() => window.open(cityData["official-site"], "_blank")} className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90">Download (From External Site)</button>
+                    <div className="flex flex-col gap-5 w-full mt-5">
+                        <button
+                            onClick={() => window.open(imageUrl, "_blank")}
+                            className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90"
+                        >
+                            View Image in New Tab
+                        </button>
+                        <button
+                            onClick={() => window.open(cityData["official-site"], "_blank")}
+                            className="bg-primary py-2 px-5 rounded-full text-white font-bold transition-all hover:opacity-90"
+                        >
+                            Download (From External Site)
+                        </button>
                         {cityData["note-link"] && (
                             <button
                                 onClick={() => window.open(cityData["note-link"], "_blank")}
@@ -60,29 +124,37 @@ export default function Content() {
                                 View Note Link
                             </button>
                         )}
-                        <button onClick={handleGoBack} className="bg-red-800 py-2 px-5 rounded-full text-white font-bold">Go Back</button>
+                        <button
+                            onClick={handleGoBack}
+                            className="bg-red-800 py-2 px-5 rounded-full text-white font-bold"
+                        >
+                            Go Back
+                        </button>
                         <hr />
 
-                        <div className='flex flex-col gap-5 flex-wrap'>
-                            <h3 className='text-white font-bold'>View Other Maps</h3>
-                            <div className='flex flex-wrap gap-4 justify-center'>
+                        <div className="flex flex-col gap-5 flex-wrap">
+                            <h3 className="text-white font-bold">View Other Maps</h3>
+                            <div className="flex flex-wrap gap-4 justify-center">
                                 {randomCities.map((city, index) => (
-                                    <div key={index} className='w-full lg:w-[48%]'>
+                                    <div key={index} className="w-full lg:w-[48%]">
                                         <button
-                                            onClick={() => window.location.href = `/${city['image-id']}`} // Forces a full reload
-                                            className='block w-full'
+                                            onClick={() => window.location.href = `/${city['image-id']}`}
+                                            className="block w-full"
                                         >
-                                            <img
-                                                src={`./${city['image-id']}_thumb.webp`}
-                                                alt={city['img-alt']}
-                                                className="rounded-lg w-full h-72 object-cover transition-all hover:opacity-80"
-                                            />
+                                            {thumbnailUrls[city['image-id']] ? (
+                                                <img
+                                                    src={thumbnailUrls[city['image-id']]}
+                                                    alt={city['img-alt']}
+                                                    className="rounded-lg w-full h-72 object-cover transition-all hover:opacity-80"
+                                                />
+                                            ) : (
+                                                <div className="w-full h-72 bg-gray-300 rounded-lg animate-pulse"></div>
+                                            )}
                                             <p className="text-white text-center font-bold mt-2">{city.city} | {city.country}</p>
                                         </button>
                                     </div>
                                 ))}
                             </div>
-
                         </div>
                     </div>
                 </div>
