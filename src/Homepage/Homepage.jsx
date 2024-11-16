@@ -100,16 +100,42 @@ export default function Homepage() {
                             <FaChevronLeft />
                         </button>
                     )}
-                    {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                        <button
-                            key={page}
-                            onClick={() => handlePageChange(page)}
-                            className={`px-4 py-2 mx-1 rounded-full font-bold ${page === currentPage ? 'bg-primary text-white' : 'bg-gray-400'
-                                }`}
-                        >
-                            {page}
-                        </button>
-                    ))}
+
+                    {(() => {
+                        const pages = [];
+                        let startPage = currentPage;
+
+                        // If we're past halfway point of window size, adjust start
+                        if (currentPage > 3) {
+                            startPage = currentPage - 2;
+                        } else {
+                            startPage = 1;
+                        }
+
+                        // If we're near the end, adjust start to show last 5 pages
+                        if (totalPages - startPage < 4) {
+                            startPage = Math.max(1, totalPages - 4);
+                        }
+
+                        // Generate 5 page numbers or less if not enough pages
+                        for (let i = 0; i < 4 && startPage + i <= totalPages; i++) {
+                            pages.push(startPage + i);
+                        }
+
+                        return pages.map((page) => (
+                            <button
+                                key={page}
+                                onClick={() => handlePageChange(page)}
+                                className={`px-4 py-2 mx-1 rounded-full font-bold ${page === currentPage
+                                    ? 'bg-primary text-white'
+                                    : 'bg-gray-400'
+                                    }`}
+                            >
+                                {page}
+                            </button>
+                        ));
+                    })()}
+
                     {currentPage < totalPages && (
                         <button
                             onClick={() => handlePageChange(currentPage + 1)}
