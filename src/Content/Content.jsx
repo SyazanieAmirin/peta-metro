@@ -16,33 +16,6 @@ export default function Content() {
     const [randomCities, setRandomCities] = useState([]);
     const navigate = useNavigate();
 
-    const compressImage = async (imageUrl, quality = 0.5, maxWidth = 1000) => {
-        return new Promise((resolve) => {
-            const img = new Image();
-            img.crossOrigin = "Anonymous"; // Avoid CORS issues
-            img.src = imageUrl;
-
-            img.onload = () => {
-                const canvas = document.createElement("canvas");
-                const scaleFactor = Math.min(maxWidth / img.width, 1); // Scale down if wider than maxWidth
-                canvas.width = img.width * scaleFactor;
-                canvas.height = img.height * scaleFactor;
-
-                const ctx = canvas.getContext("2d");
-                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-
-                // Compress the image
-                const compressedDataUrl = canvas.toDataURL("image/jpeg", quality); // JPEG format
-                resolve(compressedDataUrl);
-            };
-
-            img.onerror = () => {
-                resolve(imageUrl); // Fallback to original if compression fails
-            };
-        });
-    };
-
-
     useEffect(() => {
         const fetchCityData = async () => {
             const { data: city, error } = await Supabase
@@ -78,22 +51,20 @@ export default function Content() {
             if (!randomError) {
                 setRandomCities(otherCities);
 
-                // THIS IS FOR THUMBNAIL IMAGES
-                const fullResUrls = {};
+                // Fetch thumbnail URLs
+                const thumbnails = {};
                 await Promise.all(
                     otherCities.map(async (city) => {
-                        const { data: fullResUrl, error: fullResError } = Supabase
+                        const { data: thumbUrl, error: thumbError } = Supabase
                             .storage
                             .from('cities_maps')
-                            .getPublicUrl(`${city['image-id']}.${city['img-ext']}`);
-
-                        if (!fullResError) {
-                            const compressedUrl = await compressImage(fullResUrl.publicUrl, 0.5, 500); // Adjust quality & width for thumbnails
-                            fullResUrls[city['image-id']] = compressedUrl;
+                            .getPublicUrl(`${city['image-id']}_thumb.webp`);
+                        if (!thumbError) {
+                            thumbnails[city['image-id']] = thumbUrl.publicUrl;
                         }
                     })
                 );
-                setThumbnailUrls(fullResUrls);
+                setThumbnailUrls(thumbnails);
                 setThumbnailLoading(false);
             }
 
@@ -102,7 +73,6 @@ export default function Content() {
 
         fetchCityData();
     }, [cityId]);
-
 
     // Ensure all loading states are handled
     const isLoading = loading || imageLoading || thumbnailLoading;
@@ -163,7 +133,7 @@ export default function Content() {
                         <hr />
 
                         <div className="flex flex-col gap-5 flex-wrap">
-                            <h3 className="text-white font-bold text-2xl">View Other Maps</h3>
+                            <h3 className="text-white font-bold">View Other Maps</h3>
                             <div className="flex flex-wrap gap-4 justify-center">
                                 {randomCities.map((city, index) => (
                                     <div key={index} className="w-full lg:w-[48%]">
