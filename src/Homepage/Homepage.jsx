@@ -12,6 +12,7 @@ export default function Homepage() {
     const [searchInput, setSearchInput] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
     const itemsPerPage = 25;
+    const [pageSetIndex, setPageSetIndex] = useState(0); // Add this new state
 
     const fetchData = async () => {
         try {
@@ -54,6 +55,16 @@ export default function Homepage() {
         window.scrollTo({ top: 0 });
     };
 
+
+    const handlePrevPageSet = () => {
+        setPageSetIndex(prev => Math.max(0, prev - 1));
+    };
+
+    const handleNextPageSet = () => {
+        setPageSetIndex(prev => Math.min(Math.floor((totalPages - 1) / 5), prev + 1));
+    };
+
+
     return (
         <Suspense>
             <div className="flex flex-col gap-5 bg-primary-accent items-end lg:items-start animate-fade-in">
@@ -92,9 +103,9 @@ export default function Homepage() {
 
                 {/* Pagination Controls */}
                 <div className="flex justify-center mt-5">
-                    {currentPage > 1 && (
+                    {pageSetIndex > 0 && (
                         <button
-                            onClick={() => handlePageChange(currentPage - 1)}
+                            onClick={handlePrevPageSet}
                             className="px-3 py-2 mx-1 rounded-full font-bold bg-gray-100 transition-all hover:opacity-70"
                         >
                             <FaChevronLeft />
@@ -103,22 +114,10 @@ export default function Homepage() {
 
                     {(() => {
                         const pages = [];
-                        let startPage = currentPage;
+                        const startPage = pageSetIndex * 5 + 1;
 
-                        // If we're past halfway point of window size, adjust start
-                        if (currentPage > 3) {
-                            startPage = currentPage - 2;
-                        } else {
-                            startPage = 1;
-                        }
-
-                        // If we're near the end, adjust start to show last 5 pages
-                        if (totalPages - startPage < 4) {
-                            startPage = Math.max(1, totalPages - 4);
-                        }
-
-                        // Generate 5 page numbers or less if not enough pages
-                        for (let i = 0; i < 4 && startPage + i <= totalPages; i++) {
+                        // Generate exactly 5 page numbers or less if at the end
+                        for (let i = 0; i < 5 && startPage + i <= totalPages; i++) {
                             pages.push(startPage + i);
                         }
 
@@ -136,9 +135,9 @@ export default function Homepage() {
                         ));
                     })()}
 
-                    {currentPage < totalPages && (
+                    {(pageSetIndex + 1) * 5 < totalPages && (
                         <button
-                            onClick={() => handlePageChange(currentPage + 1)}
+                            onClick={handleNextPageSet}
                             className="px-3 py-2 mx-1 rounded-full font-bold bg-gray-100 transition-all hover:opacity-70"
                         >
                             <FaChevronRight />
