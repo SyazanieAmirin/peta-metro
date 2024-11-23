@@ -4,6 +4,7 @@ import Supabase from '../Supabase';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import NotFound404 from '../NotFound404';
+import AdSenseAd from '../Adsense';
 
 export default function Content() {
     const { cityId } = useParams();
@@ -132,6 +133,8 @@ export default function Content() {
                             Go Back
                         </button>
                         <hr />
+
+                        <AdSenseAd />
 
                         <div className="flex flex-col gap-5 flex-wrap">
                             <h3 className="text-white font-bold">View Other Maps</h3>

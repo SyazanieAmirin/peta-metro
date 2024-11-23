@@ -4,6 +4,7 @@ const Header = lazy(() => import('../Header/Header'));
 const Searchbar = lazy(() => import('../Components/Searchbar'));
 const MainCard = lazy(() => import('../Components/MainCard'));
 import Footer from '../Footer/Footer';
+import AdSenseAd from '../Adsense';
 
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
@@ -91,15 +92,17 @@ export default function Homepage() {
 
                 <div className="flex flex-col gap-5 mt-5">
                     {paginatedData.length > 0 ? (
-                        paginatedData.map((city) => (
-                            <MainCard
-                                key={city['image-id']}
-                                cityName={city.city}
-                                countryName={city.country}
-                                continent={city.continent}
-                                imageAlt={city['img-alt']}
-                                cityId={city['image-id']}
-                            />
+                        paginatedData.map((city, index) => (
+                            <React.Fragment key={city['image-id']}>
+                                <MainCard
+                                    cityName={city.city}
+                                    countryName={city.country}
+                                    continent={city.continent}
+                                    imageAlt={city['img-alt']}
+                                    cityId={city['image-id']}
+                                />
+                                {(index + 1) % 5 === 0 && <AdSenseAd />}
+                            </React.Fragment>
                         ))
                     ) : (
                         <h1 className="text-white text-xl font-bold text-center">
@@ -107,6 +110,8 @@ export default function Homepage() {
                         </h1>
                     )}
                 </div>
+
+
 
                 {/* Pagination Controls */}
                 <div className="flex justify-center mt-5">
