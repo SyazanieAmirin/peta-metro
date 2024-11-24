@@ -1,4 +1,3 @@
-import { Adsense } from '@ctrl/react-adsense';
 import { useEffect } from 'react';
 
 const AdSenseAd = () => {
