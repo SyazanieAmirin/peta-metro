@@ -10,12 +10,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 export default function Homepage() {
 
-    // Adsense
-    useEffect(() => {
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5336437476198786"
-            crossorigin="anonymous"></script>
-    }, []);
-
     const [data, setData] = useState([]);
     const [searchInput, setSearchInput] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
