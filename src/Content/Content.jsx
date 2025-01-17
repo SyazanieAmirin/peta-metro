@@ -24,15 +24,15 @@ export default function Content() {
                 .select('*')
                 .eq('image-id', cityId)
                 .single();
-
+    
             if (error) {
                 console.error("Error fetching city data:", error);
                 setLoading(false);
                 return;
             }
-
+    
             setCityData(city);
-
+    
             // Fetch the main image URL
             const { data: imagePublicUrl, error: imageError } = Supabase
                 .storage
@@ -41,21 +41,22 @@ export default function Content() {
             if (!imageError) {
                 setImageUrl(imagePublicUrl.publicUrl);
             }
-
-            // Fetch random cities excluding the current one
-            const { data: otherCities, error: randomError } = await Supabase
+    
+            // Fetch all cities excluding the current one
+            const { data: allCities, error: allCitiesError } = await Supabase
                 .from('cities')
                 .select('*')
-                .neq('image-id', cityId)
-                .limit(4);
-
-            if (!randomError) {
-                setRandomCities(otherCities);
-
-                // Fetch thumbnail URLs
+                .neq('image-id', cityId);
+    
+            if (!allCitiesError) {
+                // Shuffle the results and select the first 4 cities
+                const shuffledCities = allCities.sort(() => Math.random() - 0.5).slice(0, 4);
+                setRandomCities(shuffledCities);
+    
+                // Fetch thumbnail URLs for the random cities
                 const thumbnails = {};
                 await Promise.all(
-                    otherCities.map(async (city) => {
+                    shuffledCities.map(async (city) => {
                         const { data: thumbUrl, error: thumbError } = Supabase
                             .storage
                             .from('cities_maps')
@@ -68,12 +69,13 @@ export default function Content() {
                 setThumbnailUrls(thumbnails);
                 setThumbnailLoading(false);
             }
-
+    
             setLoading(false);
         };
-
+    
         fetchCityData();
     }, [cityId]);
+    
 
     // Ensure all loading states are handled
     const isLoading = loading || imageLoading || thumbnailLoading;
